@@ -1,0 +1,43 @@
+header { color : green;}
+
+.section1 {
+	color: green;
+}
+
+.section2  {
+	color: blue;
+}
+
+.section3 {
+	color: red;
+}
+
+section {
+	border: 1px white solid;
+}
+
+h2 {
+	background-color: yellow;
+}
+
+html {
+	background-color: white;
+}
+
+.section1 h3 {
+	color: black;
+}
+
+/* ici un commentaire */
+
+.section2 h3 {
+	color: purple;
+}
+
+a[href^='http'] {
+	color:gold;
+}
+
+.section2 > h3 {
+	background-color: green
+}

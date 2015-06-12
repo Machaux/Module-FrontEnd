@@ -1,0 +1,86 @@
+html{
+	background-color: #eee;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after{
+	box-sizing:inherit;
+}
+
+body {
+	font-family: Helvetica, Verdana, Arial, sans-serif; /* sans-serif = police générique qui existe partout */
+	color: #444;
+	max-width: 780px;
+	background-color: #FFF;
+	/*margin: 0 auto;*/
+	padding: 20px;
+}
+
+a{
+	color: inherit;
+}
+
+
+/*
+a:hover{
+	color: yellow;
+}
+
+a:visited{
+	color: purple;
+}
+
+a:focus{
+	color: green;
+}
+
+*/
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+.ma-tete{
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.main-header{
+	border-bottom: 10px black solid;
+	background-color: #eee;
+	padding: 20px;
+}
+
+.main-nav{
+	border: 1px blue solid;
+	margin: 20px;
+}
+
+.main-nav li{
+	display: inline-block;	
+}
+
+.main-nav li:before{
+	content: "£";
+	font-size: 50px;
+}
+
+.main-nav li:hover{
+	background-color: rgb(150,20,15);
+}
+
+.main-nav li:hover:before{
+	background-color: rgb(15,200,15);
+}
+
+.main-nav a{
+	text-decoration: none;
+}
+
+.contact .main-header{
+	background-color: yellow;
+}
