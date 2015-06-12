@@ -1,0 +1,28 @@
+<script>
+console.log('Toto')
+
+var array = [1,2,3,4]
+
+/* var b = array.reduce(function(accu, item, index, array) {
+	return accu + item;
+},0 );
+
+var lgth = b / array.length
+
+console.log(b)
+
+console.log(lgth)
+
+*/
+
+function avg (array) {
+	var sum = array.reduce(function (acc, item){
+		return acc + item
+	},0 )
+	return sum / array.length
+}
+
+console.log(avg (array))
+
+
+</script>
