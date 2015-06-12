@@ -1,4 +1,7 @@
 <script>
+
+"use strict"
+
 console.log('Toto')
 
 var array = [1,2,3,4]
@@ -13,8 +16,6 @@ console.log(b)
 
 console.log(lgth)
 
-*/
-
 function avg (array) {
 	var sum = array.reduce(function (acc, item){
 		return acc + item
@@ -22,7 +23,42 @@ function avg (array) {
 	return sum / array.length
 }
 
-console.log(avg (array))
+//console.log(avg (array))
 
+*/
+
+
+function Humain (nom) {
+	
+	this.nom = nom; // attribut
+}
+
+//Humain.prototype.hello = function(first_argument) {
+//	console.log("hello " + this.nom)
+// };
+
+var h1 = new Humain("Nicolas")
+
+
+h1.hello()
+
+(function () {
+	var obj = {
+		b:1,
+		c:null,
+
+		m : function(a) {
+			var self = this
+		}
+	}
+}
+
+
+
+
+
+
+
+	)
 
 </script>
