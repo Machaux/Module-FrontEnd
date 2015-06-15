@@ -1,0 +1,52 @@
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+body {
+	margin: 0 auto;
+}
+
+.main-header {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 55;
+	font-family: Indie Flower;
+
+}
+
+h2 {
+	text-transform: capitalize;
+	font-size: 42;
+	margin-left: 2%;
+}
+
+.actu img, .agenda img{
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+}
+
+.colonne1, .colonne2, .colonne3 {
+	float: left;
+	width: 30%;
+	margin: 1em;
+	text-align: justify;
+	/* border: 1em yellow solid; */
+}
+
+.actu {
+	/* border: 1em red solid; */
+}
+.actu:after {
+	content: " ";
+	clear: both;
+	display: block;
+}
+
+.agenda {
+	/*border: 1em green solid;*/
+}
+
+.agenda:after {
+	content: " ";
+	clear: both;
+	display: block;
+}

@@ -1,0 +1,39 @@
+body {
+	perspective
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	/* transform: translate(-50%,-50%); Autre méthode : une translation qui permet de s'affranchir du jeu avec les marges.*/
+	border: 2px red solid;
+	height: 200px;
+	width: 200px;
+	margin-top: -100px;
+	margin-left: -100px; 
+	
+}
+
+.A, .B, .C, .D {
+	position: absolute;
+	font-size: 50px;
+	text-align: center;
+	border: 1px blue solid;
+	height: 50px;
+	width: 50px;
+}
+
+.B {
+	right: 0;
+}
+
+.C {
+	bottom: 0;
+
+}
+
+.D {
+	right: 0;
+	bottom: 0;
+}

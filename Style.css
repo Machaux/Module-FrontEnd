@@ -10,7 +10,7 @@ html{
 body {
 	font-family: Helvetica, Verdana, Arial, sans-serif; /* sans-serif = police générique qui existe partout */
 	color: #444;
-	max-width: 780px;
+	max-width: 100%;
 	background-color: #FFF;
 	/*margin: 0 auto;*/
 	padding: 20px;
@@ -57,16 +57,23 @@ h1,h2,h3,h4,h5,h6 {
 
 .main-nav{
 	border: 1px blue solid;
-	margin: 20px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%,0); 
+	background-color: white;
 }
 
 .main-nav li{
-	display: inline-block;	
+	background-color: red;
+	display: inline-block;
 }
 
 .main-nav li:before{
 	content: "£";
 	font-size: 50px;
+
 }
 
 .main-nav li:hover{
@@ -83,4 +90,20 @@ h1,h2,h3,h4,h5,h6 {
 
 .contact .main-header{
 	background-color: yellow;
+}
+
+.a, .b {
+	float: left;
+	width: 50%;
+	outline: 1px blue solid;
+}
+
+.box {
+	background-color: red;
+}
+
+.box:after {
+	content: " ";
+	clear: both;
+	display: block;
 }
