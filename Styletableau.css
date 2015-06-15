@@ -1,0 +1,50 @@
+
+html, body{height:100%}
+
+
+
+body {
+	/* margin: 0;*/ 
+}
+
+/*table {
+	font-size: 100px;
+	border-collapse:collapse;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+*/
+
+table {
+	border-collapse: collapse;
+	border: 5px black solid;
+}
+
+thead th{
+	padding: 15px;
+	background-color: black;
+	color: #888D8C;
+}
+
+thead {
+	border: 2px white solid;
+}
+
+td, th {
+	border: 1px black solid;
+}
+
+tfoot td {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.appreciation {
+	text-align: center;
+}
+
+.Stoffels, .Dendooven, .Klein, .Fajoux, .Edou {
+	background-color: #888D8C;
+
+}

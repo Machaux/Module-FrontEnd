@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> mon joli tableau</title>
+		<link rel="stylesheet" href="styletableau.css">
+	</head>
+	
+	<body>
+
+		<table>
+
+			<caption> Le relevé de notes de la classe DTA !!</caption>
+
+			<thead>
+				<tr>
+					<th scope="col"> Nom	</th> <!--scope = permet de qualifier le sens de lecture du tableau (ici en colonne) -->
+					<th scope="col"> Prénom	</th>
+					<th scope="col"> Note	</th>
+					<th scope="col"> Appréciation	</th>
+				</tr>
+			</thead>
+
+			<tfoot>
+				<tr>
+					<td> Moyenne de la classe </td>
+					<td colspan="2"> </td>  <!--permet de "fusionner la cellule (taille de 2 cellules).-->
+					<td> Les enfants sont très sages et suivent bien les cours </td>
+				</tr>
+			</tfoot>
+
+			<tbody>			
+				<tr class="Machaux">
+					<th scope="row" class="nom"> Machaux </td> <!--le premier "td" est un th pour faire un lien au niveau ligne -->
+					<td > Frédéric </td>
+					<td > 17 </td>
+					<td class="appreciation"> En progrès </td>
+				</tr>
+
+				<tr class="Stoffels">
+					<th scope="row" class="nom"> Stoffels </td> <!--le premier "td" est un th pour faire un lien au niveau ligne -->
+					<td > Nicolas </td>
+					<td > 11.5 </td>
+					<td class="appreciation"> En progrès </td> 
+				</tr>
+
+				<tr class="Offredo">
+					<th scope="row" class="nom"> Offredo </td> <!--le premier "td" est un th pour faire un lien au niveau ligne -->
+					<td > Simon </td>
+					<td > 14.5 </td>
+					<td class="appreciation"> En progrès </td>
+				</tr>
+
+				<tr class="Dendooven">
+					<th scope="row" class="nom"> Dendooven </td> <!--le premier "td" est un th pour faire un lien au niveau ligne -->
+					<td > Rémi </td>
+					<td > 10.5 </td>
+					<td class="appreciation"> En progrès </td>
+				</tr>
+
+				<tr class="Guilloteau">
+					<th scope="row" class="nom"> Guilloteau </td> <!--le premier "td" est un th pour faire un lien au niveau ligne -->
+					<td > Nathan </td>
+					<td > 13 </td>
+					<td class="appreciation"> En progrès </td>
+				</tr>
+
+				<tr class="Klein">
+					<th scope="row" class="nom"> Klein </td> <!--le premier "td" est un th pour faire un lien au niveau ligne -->
+					<td > Pauline </td>
+					<td > 10.5 </td>
+					<td class="appreciation"> En progrès </td>
+				</tr>
+
+				<tr class="Lebon">
+					<th scope="row" class="nom"> Lebon </td>
+					<td > Jonathan </td>
+					<td > 17,5 </td>
+					<td class="appreciation"> En progrès </td>
+				</tr>
+
+				<tr class= "Fajoux">
+					<th scope="row" class="nom"> Fajoux </td>
+					<td > Thomas </td>
+					<td > 12.5 </td>
+					<td class="appreciation"> En progrès </td>
+				</tr>
+
+				<tr class="Farau">
+					<th scope="row" class="nom"> Farau </td>
+					<td > Romain </td>
+					<td > 13 </td>
+					<td class="appreciation"> En progrès </td>
+				</tr>
+
+				<tr class="Edou">
+					<th scope="row" class="nom"> Edou </td>
+					<td > Chancia </td>
+					<td > 11.5 </td>
+					<td class="appreciation"> En progrès </td>
+				</tr>
+
+				<tr class="Ducloux">
+					<th scope="row" class="nom"> Ducloux </td>
+					<td > Benoit </td>
+					<td > 13.5 </td>
+					<td class="appreciation"> En progrès </td>
+				</tr>
+			</tbody>
+			
+
+		</table>
+
+	</body>
+</html>
