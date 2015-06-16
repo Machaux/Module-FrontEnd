@@ -28,6 +28,10 @@
 					}
 					todoCtrl.reverse = true;
 
+					todoCtrl.isu =function() {
+
+					}
+
 					todoCtrl.affichemoi = true;
 				})
 		</script>
@@ -61,7 +65,7 @@
 		<input ng-model="info.name"> -->
 
 		<ul>
-			<li ng-repeat=" task in todoCtrl.tasks|orderBy:null:!todoCtrl.reverse track by $index"> <!-- track by index permet d'éviter les erreurs de doublon -->
+			<li ng-repeat=" task in todoCtrl.tasks|Filter:u track by $index"> <!-- track by index permet d'éviter les erreurs de doublon -->
 				{{ task }} <!-- | uppercase = filtre pour passer la liste en capitale -->
 			</li>
 		</ul>
