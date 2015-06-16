@@ -1,0 +1,68 @@
+<!Doctype html>
+<html>
+
+<head>
+	<title></title>
+	<link rel="stylesheet" href="styleangular.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"> </script>
+		<script>
+			angular.module("todo", []) /* création du module app1*/
+				.controller("TodoController", function(){
+					var todoCtrl = this;
+
+					todoCtrl.tasks = ["un","deux"];
+
+					todoCtrl.addTasks = function (desc) {
+						todoCtrl.tasks.push(desc)
+					}
+
+					todoCtrl.isred = ""
+
+					todoCtrl.changeclass = function () {
+					/*	if todoCtrl"red"; */
+								
+					todoCtrl.affichemoi = true;
+				})
+		</script>
+</head>
+
+<body ng-app="todo" ng-controller="TodoController as todoCtrl"> <!-- attention, le module app1 doit être créé -->
+	<header>
+		<h1 ng-class="todoCtrl.isred"
+		ng-click="todoCtrl.isred = !todoCtrl.isred"> AngularJS 1</h1>
+
+
+	</header>
+
+	<main>
+	
+		<button ng-click="todoCtrl.affichemoi = !todoCtrl.affichemoi">show / hide</button>
+		<div ng-show="todoCtrl.affichemoi">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+
+	<!--	<h1>Bonjour {{info.name}}</h1>
+		<input ng-model="info.name"> -->
+
+		<!--<ul>
+			<li ng-repeat=" task in todoCtrl.tasks track by $index"> track by index permet d'éviter les erreurs de doublon
+				{{ task }}
+			</li>
+		</ul>
+	
+		<input type="text" ng-model="newtask">
+		<button ng-click="todoCtrl.addTasks(newtask)">Add</button>
+		-->
+
+	</main>
+
+
+
+</body>
+
+</html>
