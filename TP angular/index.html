@@ -1,0 +1,94 @@
+<!Doctype html>
+<html>
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="Style/styleangular.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"> </script>
+
+	<script src="App/app.js"> </script>
+	<script src="App/controlers/todocontroler.js"> </script>
+	<script src="App/filters/bangfilter.js"> </script>
+	<script src="App/filters/boumfilter.js"> </script>
+
+</head>
+
+<body ng-app="todo" ng-controller="TodoController as todoCtrl"> <!-- attention, le module app1 doit être créé -->
+	<header>
+		<ng-include src="'/Views/header.html'"></ng-include>
+
+		<img ng-src="{{todoCtrl.src}}">
+
+		<h1 ng-class="todoCtrl.isred"
+		ng-click="todoCtrl.isred = !todoCtrl.isred"> AngularJS 1</h1>
+
+		<h3> (entete et pied provenant d'un autre fichier) </h3>
+
+	</header>
+
+	<main>
+	
+		<h3>Test des filtres perso :</h3>
+
+		{{'bonjour'|bang:12}}
+		<br>
+		{{todoCtrl.user1 | boum:1}}
+		<br>
+		{{todoCtrl.user2 | boum:2}}
+		<br>
+		{{todoCtrl.user3 | boum:3}}
+		<br>
+		<br>
+
+		<h3>Test de ng-class</h3>
+
+		<button ng-click="todoCtrl.affichemoi = !todoCtrl.affichemoi">show / hide</button>
+
+		<div ng-show="todoCtrl.affichemoi">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+
+		<ng-include src="'/Views/header.html'" scope="" onload=""></ng-include>
+
+		<h1>Bonjour {{info.name}}</h1>
+		
+		<input ng-model="info.name">
+
+		<h3>Test ng-repeat</h3>
+		
+		<ul>
+			<li ng-repeat=" task in todoCtrl.tasks|filter:'u'|orderBy track by $index"> <!-- track by index permet d'éviter les erreurs de doublon -->
+				{{ task |uppercase}} <!-- | uppercase = filtre pour passer la liste en capitale -->
+			</li>
+		</ul>
+		
+		{{todoCtrl.tasks|orderBy:null:todoCtrl.reverse}}
+		<br>
+		<button ng-click="todoCtrl.reverse = !todoCtrl.reverse">Reverse</button>
+		<br>
+		<br>
+	
+		<input type="text" ng-model="newtask">
+		<button ng-click="todoCtrl.addTasks(newtask)">Add</button>
+		
+		<h3>Test des formulaires avec angular </h3>
+
+
+
+	</main>
+
+	<footer>
+		<ng-include src="'/Views/footer.html'"></ng-include>
+	</footer>
+
+
+
+</body>
+
+</html>
