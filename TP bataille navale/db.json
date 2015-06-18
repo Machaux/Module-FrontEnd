@@ -1,0 +1,43 @@
+{
+  "games": [
+    {
+      "name": "qsd",
+      "user1": {
+        "email": "fred31@tu.fr",
+        "pseudo": "Fred"
+      },
+      "battelfieldSize": {
+        "width": 1,
+        "height": 1
+      },
+      "FleetSize": 1,
+      "id": 1
+    },
+    {
+      "name": "qsdf2",
+      "user1": {
+        "email": "fred31@tu.fr",
+        "pseudo": "Fred"
+      },
+      "battelfieldSize": {
+        "width": 1,
+        "height": 1
+      },
+      "FleetSize": 1,
+      "id": 2
+    },
+    {
+      "name": "qsdf3",
+      "user1": {
+        "email": "fred31@tu.fr",
+        "pseudo": "Fred"
+      },
+      "battelfieldSize": {
+        "width": 1,
+        "height": 1
+      },
+      "FleetSize": 1,
+      "id": 3
+    }
+  ]
+}

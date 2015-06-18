@@ -1,0 +1,19 @@
+<div ng-controller="ListeController as lstctrl">
+
+	<ul>
+			<li ng-repeat=" game in lstctrl.games"> 
+				
+				{{game.id +" "+ game.user2.pseudo}}
+
+			<button ng-click="lstctrl.joinGame(game)">Participer</button>
+			</li>
+	</ul>
+	
+	
+
+
+
+
+</div>
+<br>
+<a href="#/newgame">New game</a>
