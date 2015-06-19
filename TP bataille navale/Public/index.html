@@ -67,7 +67,7 @@
 	
 		})
 
-		.controller("ListeController", function(GameService,$location){
+		.controller("ListeController", function(GameService,$location,$http){
 
 			lstctrl=this;
 
@@ -77,11 +77,20 @@
 				});
 
 			lstctrl.joinGame = function (game) {
-				//if (game.user2) {return};
-				game.user2.pseudo ="Fred";
-				game.user2.email = "freddo@ta.com";
-				//$http.put('http://192.168.229.21:3000/games', game);
-				console.log($location.path)
+				
+				lstctrl=this;
+
+				lstctrl.game=game
+
+				if (game.user2) {return};
+				lstctrl.game.user2={};
+				lstctrl.game.user2.pseudo ="Fred";
+				lstctrl.game.user2.email = "freddo@ta.com";
+				
+				console.log(game)
+
+				$http.put('http://192.168.229.12:3000/games')
+	
 				pathid = "/battelspaceprepare/"+game.id;
 				$location.path(pathid);
 				
@@ -100,7 +109,7 @@
 					gameprprectrl.games=games
 				})
 
-		/*	console.log(gameprprectrl.games[gameprprectrl.route.id -1])*/
+			console.log(gameprprectrl.games)
 
 			/*gameprprectrl.battelfield = gameprprectrl.games[gameprprectrl.route.id -1]
 			console.log(gameprprectrl.battelfield.id)

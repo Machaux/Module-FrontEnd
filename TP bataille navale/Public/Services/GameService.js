@@ -10,17 +10,11 @@ angular.module("Batnav")
 							})
 					},
 
-				getID : function (id){
-					return $http.get('http://192.168.229.12:3000/games')
-						.then (function (games) {
-							console.log(games[id])
-						})
-
-					},
-						
+										
 				saveGame : function(game){
 						if (!game.user1) {game.user1 = {}};
 						game.user1.pseudo = "Fred";
+						game.user1.email = "freddo@ta.fr";
 						return $http.post('http://192.168.229.12:3000/games', game)
 					},
 
