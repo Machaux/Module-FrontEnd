@@ -62,7 +62,7 @@ module.exports = function(grunt){
 				flatten : true
 			},
 			lib:{
-				src:['bower_components/**/*.js','bower_components/**/*.css'],
+				src:['bower_components/**/*.min.js','bower_components/**/*.min.css'],
 				dest:'tmp/lib/',
 				expand: true,
 				flatten : true
@@ -103,7 +103,7 @@ module.exports = function(grunt){
 //	grunt.registerTask('msg', 'Hello Nantes', function(){
 //		console.log('index changed!')});
 
-		grunt.registerTask('lrs', ['connect','watch']);
+		grunt.registerTask('lrs', ['copy','connect','watch']);
 };
 
 
