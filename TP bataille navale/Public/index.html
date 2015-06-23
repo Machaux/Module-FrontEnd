@@ -9,132 +9,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"> </script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-route.min.js" ></script>
 	
-<script>
-	angular.module("Batnav",["ngRoute"])
-
-
-		.config(function($routeProvider) {
-				
-				$routeProvider
-					.when ("/" , {})
-
-					.when ("/listejeux", {
-						templateUrl: "Views/listejeux.html",
-						controller : "ListeController"
-					})
-					
-					.when ("/newgame", {
-						templateUrl: "Views/formulairejeux.html",
-						controller : "GameController"
-					})
-
-					.when ("/battelspaceprepare/:id", {
-						templateUrl: "Views/battelspace.html",
-						controller : "GamePrepareController"
-					})
-
-			//		.otherwise({
-			//			redirectTo :"/"
-			//		})
-					
-		})
-			
-		.controller("GameController", function(GameService){
-		
-			gamectrl = this;
-
-			gamectrl.listbateau = [
-				{value:1 , label: "1 bateau"},
-				{value:2 , label: "2 bateaux"},
-				{value:3 , label: "3 bateaux"},
-			];
-
-			gamectrl.games = [];
-
-			gamectrl.addGame = function (form){
-				if (form.$invalid) return
-				var clone=angular.copy(gamectrl.game)
-				gamectrl.games.push(clone)
-				GameService.saveGame(clone)
-				//	.then ( return &location.path ="/")
-					// ici mettre le  : / pour revenir à la liste
-			} 
-
-	//		function fetchGames() {
-	//			GameService.getAll()
-	//				.then
-	//		}
+	<script src="App/App.js" ></script>
+	<script src="App/Controllers/GameController.js" ></script>
+	<script src="App/Controllers/ListeController.js" ></script>
+	<script src="App/Controllers/GamePrepareController.js" ></script>
 	
-		})
-
-		.controller("ListeController", function(GameService,$location,$http){
-
-			lstctrl=this;
-
-			GameService.getAll()
-				.then (function(games) {
-					lstctrl.games=games
-				});
-
-			lstctrl.joinGame = function (game) {
-				
-				lstctrl=this;
-
-				lstctrl.game=game
-
-				if (game.user2) {return};
-				lstctrl.game.user2={};
-				lstctrl.game.user2.pseudo ="Fred";
-				lstctrl.game.user2.email = "freddo@ta.com";
-				
-				console.log(game)
-
-				$http.put('http://192.168.229.12:3000/games')
-	
-				pathid = "/battelspaceprepare/"+game.id;
-				$location.path(pathid);
-				
-
-			}
-		})
-
-		.controller("GamePrepareController", function(GameService,$route){
-			gameprprectrl = this;
-
-			gameprprectrl.route = $route.current.params
-			console.log(gameprprectrl.route.id)
-
-			GameService.getAll()
-				.then (function(games) {
-					gameprprectrl.games=games
-				})
-
-			console.log(gameprprectrl.games)
-
-			/*gameprprectrl.battelfield = gameprprectrl.games[gameprprectrl.route.id -1]
-			console.log(gameprprectrl.battelfield.id)
-*/
-
-
-		//$routeParams[0]
-
-			gameprprectrl.getId = function() {
-				console.log("'coucou'")
-			}
-			
-			//gameprprectrl.battelfield = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
-
-			/*GameService.getID()
-				.then (function(games) {
-					gameprprectrl.games=games
-				})*/
-
-		})
-
-
-</script>
-
-<script src="/Services/GameService.js"></script>
+	<script src="/Services/GameService.js"></script>
 
 </head>
 
@@ -160,6 +40,7 @@
 	<input ng-model= "borderwidth" type="number"> {{borderwidth}}
 
 </div> -->
+
 	<footer>
 	</footer>
 </body>

@@ -91,13 +91,20 @@ module.exports = function(grunt){
         			},
       			reload: true
       		}
-    	},  		
+    	},
+
+    	karma: {
+ 			unit: {
+    			configFile: 'karma.conf.js'
+  			}
+		}
 
   	});
   
   	grunt.loadNpmTasks('grunt-contrib-copy');
   	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-karma');
 
 
 //	grunt.registerTask('msg', 'Hello Nantes', function(){

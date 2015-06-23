@@ -7,3 +7,4 @@ nb-configuration.xml
 node_modules/
 bootstrap-3.3.5/
 bower_components/
+tmp/
