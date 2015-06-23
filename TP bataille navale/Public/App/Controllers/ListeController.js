@@ -1,12 +1,12 @@
 //ListeController.js
 
-"use strict"
+//"use strict"
 
 angular.module("Batnav",["ngRoute"])
 
 	.controller("ListeController", function(GameService,$location,$http){
 
-			lstctrl=this;
+			var lstctrl=this;
 
 			GameService.getAll()
 				.then (function(games) {
@@ -24,13 +24,16 @@ angular.module("Batnav",["ngRoute"])
 				lstctrl.game.user2.pseudo ="Fred";
 				lstctrl.game.user2.email = "freddo@ta.com";
 				
-				console.log(game)
+				//console.log(game)
 
 				$http.put('http://192.168.229.12:3000/games')
+	/*				.then function(response) {
+						return response.data
+					};*/
 	
-				pathid = "/battelspaceprepare/"+game.id;
+				var pathid = "/battelspaceprepare/"+game.id;
 				$location.path(pathid);
 				
 
-			}
+			};
 		});

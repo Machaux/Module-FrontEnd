@@ -11,17 +11,17 @@ angular.module("Batnav",["ngRoute"])
 					.when ("/" , {})
 
 					.when ("/listejeux", {
-						templateUrl: "Views/listejeux.html",
+						templateUrl: "listejeux.html",
 						controller : "ListeController"
 					})
 					
 					.when ("/newgame", {
-						templateUrl: "Views/formulairejeux.html",
+						templateUrl: "formulairejeux.html",
 						controller : "GameController"
 					})
 
 					.when ("/battelspaceprepare/:id", {
-						templateUrl: "Views/battelspace.html",
+						templateUrl: "battelspace.html",
 						controller : "GamePrepareController"
 					})
 
